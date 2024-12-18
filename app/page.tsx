@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Projects from './components/Projects'
 import About from './components/About'
 import { siteConfig } from '@/configs'
+import Stacks from './components/Stacks'
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('inicio')
@@ -108,9 +109,34 @@ export default function Portfolio() {
           <Home />
         </section>
 
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: "80%" }}
+          transition={{ duration: 0.8 }}
+          className={`mx-auto h-px bg-gradient-to-r ${siteConfig.colors.gradient.primary} my-8`}
+        />
+
         <section id="projetos" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
           <Projects />
         </section>
+
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: "80%" }}
+          transition={{ duration: 0.8 }}
+          className={`mx-auto h-px bg-gradient-to-r ${siteConfig.colors.gradient.primary} my-8`}
+        />
+
+        <section id="stacks" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+          <Stacks />
+        </section>
+
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: "80%" }}
+          transition={{ duration: 0.8 }}
+          className={`mx-auto h-px bg-gradient-to-r ${siteConfig.colors.gradient.primary} my-8`}
+        />
 
         <section id="sobre" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
           <About />
