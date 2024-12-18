@@ -5,7 +5,8 @@ import { useState } from 'react'
 import { Mail, Instagram, Loader2, Phone } from 'lucide-react'
 import { siteConfig } from '@/configs'
 import { submitContactForm } from '../actions/submit'
-import { toast } from 'sonner'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -23,13 +24,43 @@ export default function Contact() {
       const response = await submitContactForm(formData)
       if (response.success) {
         setFormData({ name: '', email: '', message: '' })
-        toast.success('Mensagem enviada com sucesso!')
+        toast('Mensagem enviada com sucesso!', {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          type: "success"
+        })
       } else {
-        toast.error(response.message || 'Erro ao enviar mensagem')
+        toast(response.message || 'Erro ao enviar mensagem', {
+          position: "bottom-right", 
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          type: "error"
+        })
       }
     } catch (error) {
       console.error('Error submitting form:', error)
-      toast.error('Erro ao enviar mensagem. Tente novamente mais tarde.')
+      toast('Erro ao enviar mensagem. Tente novamente mais tarde.', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        type: "error"
+      })
     } finally {
       setIsSubmitting(false)
     }
@@ -41,6 +72,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-4 flex-col">
+      <ToastContainer position="top-right" autoClose={3000} />
       <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#2380c4] to-pink-500">
         {siteConfig.contact.title}
       </h1>
