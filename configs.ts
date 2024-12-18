@@ -2,8 +2,8 @@ export const siteConfig = {
   // Cores e gradientes padrão
   colors: {
     gradient: {
-      primary: "from-[#2380c4] to-pink-500",
-      hover: "linear-gradient(to right, #ec4899, #2380c4)"
+      primary: "from-[#2380c4] to-[#23c4a7]",
+      hover: "linear-gradient(to right, #23c4a7, #2380c4)"
     },
     text: {
       primary: "text-gray-300",
