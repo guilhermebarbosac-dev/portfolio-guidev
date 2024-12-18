@@ -32,7 +32,7 @@ export default function Contact() {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "colored",
           type: "success"
         })
       } else {
@@ -44,7 +44,7 @@ export default function Contact() {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "colored",
           type: "error"
         })
       }
@@ -58,7 +58,7 @@ export default function Contact() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "colored",
         type: "error"
       })
     } finally {
