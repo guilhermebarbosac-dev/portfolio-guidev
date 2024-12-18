@@ -133,7 +133,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                   placeholder="Nome"
-                  className="w-full pb-2 bg-transparent border-b border-gray-600 focus:border-white outline-none transition-colors"
+                  className="w-full pb-2 bg-transparent border-b border-gray-600 focus:border-white outline-none transition-colors placeholder:text-gray-800"
                   required
                   disabled={isSubmitting}
                 />
@@ -146,7 +146,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                   placeholder="Email"
-                  className="w-full pb-2 bg-transparent border-b border-gray-600 focus:border-white outline-none transition-colors"
+                  className="w-full pb-2 bg-transparent border-b border-gray-600 focus:border-white outline-none transition-colors placeholder:text-gray-800"
                   required
                   disabled={isSubmitting}
                 />
@@ -159,7 +159,7 @@ export default function Contact() {
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
                   placeholder="Mensagem"
                   rows={4}
-                  className="w-full pb-2 bg-transparent border-b border-gray-600 focus:border-white outline-none transition-colors resize-none"
+                  className="w-full pb-2 bg-transparent border-b border-gray-600 focus:border-white outline-none transition-colors placeholder:text-gray-800"
                   required
                   disabled={isSubmitting}
                 />
