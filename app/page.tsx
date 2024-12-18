@@ -3,11 +3,11 @@
 import { useEffect, useState } from 'react'
 import { motion, useScroll, useTransform } from 'motion/react'
 import { ChevronDown } from 'lucide-react'
-import Home from './components/Home'
-import Projects from './components/Projects'
-import About from './components/About'
+import Home from './_components/Home'
+import Projects from './_components/Projects'
+import About from './_components/About'
 import { siteConfig } from '@/configs'
-import Stacks from './components/Stacks'
+import Stacks from './_components/Stacks'
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('inicio')
@@ -55,10 +55,15 @@ export default function Portfolio() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans relative overflow-hidden">
+    <motion.div 
+      className="min-h-screen bg-background text-foreground font-sans relative overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="fixed inset-0 z-0">
         <motion.div 
-          className="absolute top-10 left-10 w-[40rem] h-[40rem] rounded-full blur-3xl"
+          className="absolute top-10 left-10 w-[60rem] h-[60rem] rounded-full blur-3xl"
           style={{ backgroundColor: purpleColor }}
           animate={{
             scale: [1, 1.2, 1],
@@ -71,7 +76,7 @@ export default function Portfolio() {
           }}
         />
         <motion.div
-          className="absolute bottom-10 right-10 w-[45rem] h-[45rem] rounded-full blur-3xl"
+          className="absolute bottom-10 right-10 w-[65rem] h-[65rem] rounded-full blur-3xl"
           style={{ backgroundColor: blueColor }}
           animate={{
             scale: [1.2, 1, 1.2],
@@ -105,42 +110,91 @@ export default function Portfolio() {
       </nav>
 
       <main className="pt-16 relative z-10">
-        <section id="inicio" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <motion.section 
+          id="inicio" 
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <Home />
-        </section>
+        </motion.section>
 
         <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: "80%" }}
-          transition={{ duration: 0.8 }}
-          className={`mx-auto h-px bg-gradient-to-r ${siteConfig.colors.gradient.primary} my-8`}
+          initial={{ width: "0%" }}
+          exit={{ width: 0 }}
+          viewport={{ once: false }}
+          className="mx-auto h-px bg-gradient-to-r from-[#2380c4] to-pink-500 my-8"
+          style={{
+            width: useTransform(
+              scrollYProgress,
+              [0.1, 0.25, 0.5, 0.75, 1],
+              ["0%", "20%", "40%", "60%", "80%"]
+            )
+          }}
         />
 
-        <section id="projetos" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <motion.section 
+          id="projetos" 
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <Projects />
-        </section>
+        </motion.section>
 
         <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: "80%" }}
-          transition={{ duration: 0.8 }}
-          className={`mx-auto h-px bg-gradient-to-r ${siteConfig.colors.gradient.primary} my-8`}
+          initial={{ width: "0%" }}
+          exit={{ width: 0 }}
+          viewport={{ once: false }}
+          className="mx-auto h-px bg-gradient-to-r from-[#2380c4] to-pink-500 my-8"
+          style={{
+            width: useTransform(
+              scrollYProgress,
+              [0.1, 0.25, 0.5, 0.75, 1],
+              ["0%", "20%", "40%", "60%", "80%"]
+            )
+          }}
         />
 
-        <section id="stacks" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <motion.section 
+          id="stacks" 
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <Stacks />
-        </section>
+        </motion.section>
 
         <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: "80%" }}
-          transition={{ duration: 0.8 }}
-          className={`mx-auto h-px bg-gradient-to-r ${siteConfig.colors.gradient.primary} my-8`}
+          initial={{ width: "0%" }}
+          exit={{ width: 0 }}
+          viewport={{ once: false }}
+          className="mx-auto h-px bg-gradient-to-r from-[#2380c4] to-pink-500 my-8"
+          style={{
+            width: useTransform(
+              scrollYProgress,
+              [0.1, 0.25, 0.5, 0.75, 1],
+              ["0%", "20%", "40%", "60%", "80%"]
+            )
+          }}
         />
 
-        <section id="sobre" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <motion.section 
+          id="sobre" 
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <About />
-        </section>
+        </motion.section>
       </main>
 
       <footer className="py-6 px-4 sm:px-6 lg:px-8 text-center text-muted-foreground relative z-10">
@@ -155,6 +209,6 @@ export default function Portfolio() {
       >
         <ChevronDown className="transform rotate-180" />
       </motion.div>
-    </div>
+    </motion.div>
   )
 }

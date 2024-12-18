@@ -7,7 +7,7 @@ import { siteConfig } from '@/configs'
 export default function Projects() {
   return (
     <div className="max-w-6xl mx-auto">
-      <h1 className={`text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
+      <h1 className={`text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#2380c4] to-pink-500`}>
         {siteConfig.projects.sectionTitle}
       </h1>
       <div className="grid grid-cols-1 gap-12">

@@ -12,7 +12,7 @@ export default function About() {
         transition={{ duration: 0.5 }}
         className="bg-background/50 text-center"
       >
-        <h1 className={`text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
+        <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#2380c4] to-pink-500">
           {siteConfig.about.sectionTitle}
         </h1>
         {siteConfig.about.paragraphs.map((paragraph, index) => (

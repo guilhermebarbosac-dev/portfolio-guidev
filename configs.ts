@@ -14,7 +14,7 @@ export const siteConfig = {
 
   // Imagens
   images: {
-    profile: "/maisproximo.png?height=500&width=500",
+    profile: "/profile.png",
     projects: {
       schia: "/projects_images/schia.png",
       project2: "/project2.png", 
