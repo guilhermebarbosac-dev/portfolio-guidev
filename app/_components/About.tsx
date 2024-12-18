@@ -5,7 +5,7 @@ import { siteConfig } from '@/configs'
 
 export default function About() {
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="flex flex-col items-center justify-center min-h-screen max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

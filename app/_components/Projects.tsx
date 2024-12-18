@@ -31,14 +31,14 @@ export default function Projects() {
               
               <div className="w-full md:w-1/2 flex flex-col justify-between">
                 <div>
-                  <h2 className={`text-2xl font-semibold mb-4 ${siteConfig.colors.text.heading}`}>{project.title}</h2>
-                  <p className={`mb-4 ${siteConfig.colors.text.primary}`}>{project.description}</p>
+                  <h2 className={`text-2xl font-semibold mb-4 text-white dark:${siteConfig.colors.text.heading}`}>{project.title}</h2>
+                  <p className={`mb-4 text-white dark:${siteConfig.colors.text.primary}`}>{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.stack.map((tech, i) => (
                       <span 
                         key={i}
-                        className={`px-3 py-1 text-sm bg-gray-800 ${siteConfig.colors.text.primary} rounded-full`}
+                        className={`px-3 py-1 text-sm bg-gray-800 dark:bg-gray-800 text-white dark:${siteConfig.colors.text.primary} rounded-full`}
                       >
                         {tech}
                       </span>

@@ -8,6 +8,7 @@ import Projects from './_components/Projects'
 import About from './_components/About'
 import { siteConfig } from '@/configs'
 import Stacks from './_components/Stacks'
+import Contact from './_components/Contact'
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('inicio')
@@ -110,9 +111,30 @@ export default function Portfolio() {
       </nav>
 
       <main className="pt-16 relative z-10">
+        <div className="fixed left-8 top-1/2 -translate-y-1/2 h-[60vh] flex items-center">
+          <div className="w-1 h-full bg-gray-800/20 rounded-full relative">
+            <motion.div
+              className="absolute top-0 w-full bg-gradient-to-b from-[#2380c4] to-pink-500 rounded-full origin-top"
+              style={{ 
+                scaleY: scrollYProgress,
+                height: "100%" 
+              }}
+            />
+            <motion.div
+              className="absolute -right-[7px] w-4 h-4 rounded-full bg-gradient-to-r from-[#2380c4] to-pink-500"
+              style={{
+                top: scrollYProgress,
+                y: "-50%"
+              }}
+            >
+              <div className="absolute inset-[2px] rounded-full bg-background" />
+            </motion.div>
+          </div>
+        </div>
+
         <motion.section 
           id="inicio" 
-          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -121,23 +143,9 @@ export default function Portfolio() {
           <Home />
         </motion.section>
 
-        <motion.div
-          initial={{ width: "0%" }}
-          exit={{ width: 0 }}
-          viewport={{ once: false }}
-          className="mx-auto h-px bg-gradient-to-r from-[#2380c4] to-pink-500 my-8"
-          style={{
-            width: useTransform(
-              scrollYProgress,
-              [0.1, 0.25, 0.5, 0.75, 1],
-              ["0%", "20%", "40%", "60%", "80%"]
-            )
-          }}
-        />
-
         <motion.section 
           id="projetos" 
-          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -146,23 +154,9 @@ export default function Portfolio() {
           <Projects />
         </motion.section>
 
-        <motion.div
-          initial={{ width: "0%" }}
-          exit={{ width: 0 }}
-          viewport={{ once: false }}
-          className="mx-auto h-px bg-gradient-to-r from-[#2380c4] to-pink-500 my-8"
-          style={{
-            width: useTransform(
-              scrollYProgress,
-              [0.1, 0.25, 0.5, 0.75, 1],
-              ["0%", "20%", "40%", "60%", "80%"]
-            )
-          }}
-        />
-
         <motion.section 
           id="stacks" 
-          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -171,29 +165,26 @@ export default function Portfolio() {
           <Stacks />
         </motion.section>
 
-        <motion.div
-          initial={{ width: "0%" }}
-          exit={{ width: 0 }}
-          viewport={{ once: false }}
-          className="mx-auto h-px bg-gradient-to-r from-[#2380c4] to-pink-500 my-8"
-          style={{
-            width: useTransform(
-              scrollYProgress,
-              [0.1, 0.25, 0.5, 0.75, 1],
-              ["0%", "20%", "40%", "60%", "80%"]
-            )
-          }}
-        />
-
         <motion.section 
           id="sobre" 
-          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <About />
+        </motion.section>
+
+        <motion.section 
+          id="contato" 
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <Contact />
         </motion.section>
       </main>
 

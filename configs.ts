@@ -77,57 +77,66 @@ export const siteConfig = {
     ]
   },
   // Conteúdo do Stacks
-    stacks: {
-        title: "STACKS",
-        list: [
-            "React", 
-            "TypeScript", 
-            "Node.js", 
-            "Next.js", 
-            "Angular", 
-            "SCSS", 
-            "Postgres", 
-            "Shadcn UI", 
-            "Lucide", 
-            "Tailwind", 
-            "ESlint", 
-            "Git", 
-            "GitHub", 
-            "Docker", 
-            "Prisma",
-            "Bootstrap",
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Yarn"
-        ],
-    icons: {
-            "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", 
-            "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-            "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-            "Angular": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
-            "SCSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-            "Postgres": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-            "Shadcn UI": "/logos_stacks/shadcn.png",
-            "Lucide": "https://lucide.dev/logo.dark.svg", 
-            "Tailwind": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
-            "ESlint": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg",
-            "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-            "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-            "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-            "Prisma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
-            "Bootstrap": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-            "HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-            "CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-            "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-            "Yarn": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg"
+  stacks: {
+      title: "STACKS",
+      list: [
+          "React", 
+          "TypeScript", 
+          "Node.js", 
+          "Next.js", 
+          "Angular", 
+          "SCSS", 
+          "Postgres", 
+          "Shadcn UI", 
+          "Lucide", 
+          "Tailwind", 
+          "ESlint", 
+          "Git", 
+          "GitHub", 
+          "Docker", 
+          "Prisma",
+          "Bootstrap",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Yarn"
+      ],
+  icons: {
+          "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+          "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", 
+          "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+          "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+          "Angular": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+          "SCSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+          "Postgres": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+          "Shadcn UI": "/logos_stacks/shadcn.png",
+          "Lucide": "https://lucide.dev/logo.dark.svg", 
+          "Tailwind": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+          "ESlint": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg",
+          "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+          "GitHub": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+          "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+          "Prisma": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+          "Bootstrap": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+          "HTML": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+          "CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+          "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+          "Yarn": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg"
     }
   },
-
+  //Contato
+  contact: {
+    title: "CONTATO",
+    subtitle: "ENTRE EM CONTATO",
+    description: "Entre em contato comigo para discutir oportunidades de colaboração ou para saber mais sobre meus serviços.",
+    buttons: {
+      whatsapp: "WhatsApp",
+      email: "Email"
+    }
+  },
   // Navegação
   navigation: {
-    sections: ["inicio", "projetos", "stacks", "sobre"],
+    sections: ["inicio", "projetos", "stacks", "sobre", "contato"],
     height: 64 // altura da navbar em pixels
   },
 
