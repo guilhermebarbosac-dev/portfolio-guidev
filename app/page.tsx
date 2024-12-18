@@ -14,13 +14,12 @@ export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('inicio')
   const { scrollYProgress } = useScroll()
 
-  // Transformações suaves de cores baseadas no scroll
-  const purpleHue = useTransform(scrollYProgress, [0, 0.5, 1], [280, 230, 180])
-  const blueHue = useTransform(scrollYProgress, [0, 0.5, 1], [220, 270, 320])
+  const primaryHue = useTransform(scrollYProgress, [0, 0.5, 1], [220, 245, 270])
+  const secondaryHue = useTransform(scrollYProgress, [0, 0.5, 1], [270, 245, 220])
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.2, 0.25, 0.3])
 
-  const purpleColor = useTransform(purpleHue, (hue) => `hsla(${hue}, 70%, 50%, ${opacity.get()})`)
-  const blueColor = useTransform(blueHue, (hue) => `hsla(${hue}, 70%, 50%, ${opacity.get()})`)
+  const primaryColor = useTransform(primaryHue, (hue) => `hsla(${hue}, 70%, 45%, ${opacity.get()})`)
+  const secondaryColor = useTransform(secondaryHue, (hue) => `hsla(${hue}, 70%, 45%, ${opacity.get()})`)
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -65,7 +64,7 @@ export default function Portfolio() {
       <div className="fixed inset-0 z-0">
         <motion.div 
           className="absolute top-10 left-10 w-[60rem] h-[60rem] rounded-full blur-3xl"
-          style={{ backgroundColor: purpleColor }}
+          style={{ backgroundColor: primaryColor }}
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 90, 0],
@@ -78,7 +77,7 @@ export default function Portfolio() {
         />
         <motion.div
           className="absolute bottom-10 right-10 w-[65rem] h-[65rem] rounded-full blur-3xl"
-          style={{ backgroundColor: blueColor }}
+          style={{ backgroundColor: secondaryColor }}
           animate={{
             scale: [1.2, 1, 1.2],
             rotate: [90, 0, 90],
