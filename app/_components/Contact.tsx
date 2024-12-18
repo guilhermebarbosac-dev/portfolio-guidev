@@ -79,15 +79,12 @@ export default function Contact() {
         className="bg-background/50 text-center"
       >
         <ToastContainer position="top-right" autoClose={3000} />
-        <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#2380c4] to-pink-500">
+        <h1 className={`text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
           {siteConfig.contact.title}
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div>
-              <h2 className={`text-3xl font-bold text-center ${siteConfig.colors.text.primary}`}>
-                {siteConfig.contact.subtitle}
-              </h2>
               <p className={`mt-4 ${siteConfig.colors.text.primary}`}>
                 Conecte-se e vamos criar juntos soluções incríveis. Preencha o formulário ao lado ou utilize um dos canais abaixo.
               </p>

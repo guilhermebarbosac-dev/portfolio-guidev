@@ -7,7 +7,7 @@ import { siteConfig } from '@/configs'
 export default function Projects() {
   return (
     <div className="max-w-6xl mx-auto">
-      <h1 className={`text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#2380c4] to-pink-500`}>
+      <h1 className={`text-4xl font-bold text-center mb-12 bg-clip-text text-transparent ${siteConfig.colors.gradient.primary}`}>
         {siteConfig.projects.sectionTitle}
       </h1>
       <div className="grid grid-cols-1 gap-12">
@@ -51,7 +51,7 @@ export default function Projects() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`px-4 py-2 bg-gradient-to-r ${siteConfig.colors.gradient.primary} text-white rounded-lg`}
+                    className={`px-4 py-2 ${siteConfig.colors.gradient.primary} text-white rounded-lg`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

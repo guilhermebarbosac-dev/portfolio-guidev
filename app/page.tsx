@@ -100,7 +100,7 @@ export default function Portfolio() {
                 className={`uppercase text-sm sm:text-lg transition-colors duration-300 ${
                   activeSection === section 
                     ? `text-transparent bg-clip-text bg-gradient-to-r ${siteConfig.colors.gradient.primary}`
-                    : 'text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#2380c4] hover:to-pink-500'
+                    : `text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r ${siteConfig.colors.gradient.primary}`
                 }`}
               >
                 {section.toUpperCase()}
@@ -114,14 +114,14 @@ export default function Portfolio() {
         <div className="fixed left-8 top-1/2 -translate-y-1/2 h-[60vh] flex items-center">
           <div className="w-1 h-full bg-gray-800/20 rounded-full relative">
             <motion.div
-              className="absolute top-0 w-full bg-gradient-to-b from-[#2380c4] to-pink-500 rounded-full origin-top"
+              className={`absolute top-0 w-full bg-gradient-to-b ${siteConfig.colors.gradient.primary} rounded-full origin-top`}
               style={{ 
                 scaleY: scrollYProgress,
                 height: "100%" 
               }}
             />
             <motion.div
-              className="absolute -right-[7px] w-4 h-4 rounded-full bg-gradient-to-r from-[#2380c4] to-pink-500"
+              className={`absolute -right-[7px] w-4 h-4 rounded-full bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}
               style={{
                 top: scrollYProgress,
                 y: "-50%"

@@ -19,7 +19,7 @@ export default function Stacks() {
         transition={{ duration: 0.5 }}
         className="bg-background/50"
       >
-        <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#2380c4] to-pink-500">
+        <h1 className={`text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
           {siteConfig.stacks.title}
         </h1>
 
