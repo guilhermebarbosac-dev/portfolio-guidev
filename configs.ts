@@ -42,24 +42,24 @@ export const siteConfig = {
         liveUrl: "https://schia.com.br",
         githubUrl: "https://github.com/guilhermebarbosac-dev"
       },
-      {
-        id: 2,
-        title: "Hyst",
-        description: "Do consectetur proident proident id eiusmod deserunt consequat Do consectetur proident proident id eiusmod",
-        image: "/project2.png",
-        stack: ["React", "TypeScript", "SCSS", "Solidity", "AWS"],
-        liveUrl: "https://project2.com",
-        githubUrl: "https://github.com/project2"
-      },
-      {
-        id: 3,
-        title: "Project",
-        description: "Do consectetur proident proident id eiusmod deserunt consequat Do consectetur proident proident id eiusmod",
-        image: "/project3.png",
-        stack: ["React", "TypeScript", "SCSS", "Slider", "AWS", "Vercel"],
-        liveUrl: "https://project3.com",
-        githubUrl: "https://github.com/project3"
-      }
+    //   {
+    //     id: 2,
+    //     title: "Hyst",
+    //     description: "Do consectetur proident proident id eiusmod deserunt consequat Do consectetur proident proident id eiusmod",
+    //     image: "/project2.png",
+    //     stack: ["React", "TypeScript", "SCSS", "Solidity", "AWS"],
+    //     liveUrl: "https://project2.com",
+    //     githubUrl: "https://github.com/project2"
+    //   },
+    //   {
+    //     id: 3,
+    //     title: "Project",
+    //     description: "Do consectetur proident proident id eiusmod deserunt consequat Do consectetur proident proident id eiusmod",
+    //     image: "/project3.png",
+    //     stack: ["React", "TypeScript", "SCSS", "Slider", "AWS", "Vercel"],
+    //     liveUrl: "https://project3.com",
+    //     githubUrl: "https://github.com/project3"
+    //   }
     ],
     buttons: {
       view: "Ver Projeto",
