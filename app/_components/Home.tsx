@@ -15,7 +15,7 @@ export default function Home() {
           className="flex flex-col items-center"
         >
           <motion.h1 
-            className={`text-4xl md:text-6xl font-bold mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#2380c4] to-pink-500 text-center`}
+            className={`text-3xl sm:text-4xl md:text-6xl font-bold mb-3 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#2380c4] to-pink-500 text-center`}
             animate={{
               backgroundPosition: ["0%", "100%", "0%"],
             }}
@@ -30,9 +30,9 @@ export default function Home() {
           >
             {siteConfig.home.title}
           </motion.h1>
-          <div className="flex items-center gap-3 mb-6 md:mb-8">
+          <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-8">
             <motion.div 
-              className={`h-[1px] w-16 md:w-32 bg-gradient-to-r from-[#2380c4] to-pink-500`}
+              className={`h-[1px] w-12 sm:w-16 md:w-32 bg-gradient-to-r from-[#2380c4] to-pink-500`}
               animate={{
                 backgroundPosition: ["0%", "100%", "0%"],
               }}
@@ -45,11 +45,11 @@ export default function Home() {
                 backgroundSize: "200% auto"
               }}
             />
-            <p className={`text-xl md:text-2xl from-[#2380c4] to-pink-500 font-light whitespace-nowrap`}>
+            <p className={`text-lg sm:text-xl md:text-2xl from-[#2380c4] to-pink-500 font-light whitespace-nowrap`}>
               {siteConfig.home.role}
             </p>
             <motion.div 
-              className={`h-[1px] w-16 md:w-32 bg-gradient-to-r to-[#2380c4] from-pink-500`}
+              className={`h-[1px] w-12 sm:w-16 md:w-32 bg-gradient-to-r to-[#2380c4] from-pink-500`}
               animate={{
                 backgroundPosition: ["0%", "100%", "0%"],
               }}
@@ -63,7 +63,7 @@ export default function Home() {
               }}
             />
           </div>
-          <p className={`text-lg md:text-xl from-[#2380c4] to-pink-500 max-w-xl text-center px-4`}>
+          <p className={`text-base sm:text-lg md:text-xl from-[#2380c4] to-pink-500 max-w-xl text-center px-2 md:px-4`}>
             {siteConfig.home.description}
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.7 }}
-          className="relative w-72 h-72 md:w-96 md:h-96 mb-8 md:mb-0"
+          className="relative w-60 h-60 sm:w-72 sm:h-72 md:w-96 md:h-96 mb-6 md:mb-0"
         >
           <motion.div 
             className={`absolute inset-0 bg-gradient-to-r from-[#2380c4] to-pink-500 rounded-2xl rotate-6`}

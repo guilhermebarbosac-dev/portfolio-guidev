@@ -92,12 +92,12 @@ export default function Portfolio() {
       </div>
 
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm py-4 px-4 sm:px-6 lg:px-8">
-        <ul className="flex justify-center space-x-6">
+        <ul className="flex justify-center space-x-2 sm:space-x-6">
           {siteConfig.navigation.sections.map((section) => (
             <li key={section}>
               <button
                 onClick={() => scrollToSection(section)}
-                className={`uppercase text-lg transition-colors duration-300 ${
+                className={`uppercase text-sm sm:text-lg transition-colors duration-300 ${
                   activeSection === section 
                     ? `text-transparent bg-clip-text bg-gradient-to-r ${siteConfig.colors.gradient.primary}`
                     : 'text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#2380c4] hover:to-pink-500'
