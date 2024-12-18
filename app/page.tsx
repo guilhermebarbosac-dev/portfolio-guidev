@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'motion/react'
 import { ChevronDown } from 'lucide-react'
 import Home from './components/Home'
 import Projects from './components/Projects'
