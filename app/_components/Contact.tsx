@@ -133,7 +133,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                   placeholder="Nome"
-                  className="w-full pb-2 bg-transparent border-b border-gray-600 focus:border-white outline-none transition-colors placeholder:text-gray-800"
+                  className="w-full pb-2 bg-transparent border-b border-gray-600 dark:border-white focus:border-gray-900 dark:focus:border-white outline-none transition-colors placeholder:text-gray-600 dark:placeholder:text-white"
                   required
                   disabled={isSubmitting}
                 />
@@ -146,7 +146,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                   placeholder="Email"
-                  className="w-full pb-2 bg-transparent border-b border-gray-600 focus:border-white outline-none transition-colors placeholder:text-gray-800"
+                  className="w-full pb-2 bg-transparent border-b border-gray-600 dark:border-white focus:border-gray-900 dark:focus:border-white outline-none transition-colors placeholder:text-gray-600 dark:placeholder:text-white"
                   required
                   disabled={isSubmitting}
                 />
@@ -159,7 +159,7 @@ export default function Contact() {
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
                   placeholder="Mensagem"
                   rows={4}
-                  className="w-full pb-2 bg-transparent border-b border-gray-600 focus:border-white outline-none transition-colors placeholder:text-gray-800"
+                  className="w-full pb-2 bg-transparent border-b border-gray-600 dark:border-white focus:border-gray-900 dark:focus:border-white outline-none transition-colors placeholder:text-gray-600 dark:placeholder:text-white"
                   required
                   disabled={isSubmitting}
                 />
@@ -167,7 +167,7 @@ export default function Contact() {
 
               <motion.button
                 type="submit"
-                className="px-6 py-2 rounded-lg bg-transparent border border-gray-600 hover:border-white text-gray-400 hover:text-white transition-colors w-full"
+                className="px-6 py-2 rounded-lg bg-transparent border border-gray-600 hover:border-gray-900 dark:hover:border-white text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors w-full"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
                 disabled={isSubmitting}
