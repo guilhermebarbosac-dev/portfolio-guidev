@@ -57,7 +57,7 @@ export default function Projects() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`px-4 py-2 ${siteConfig.colors.gradient.primary} text-white rounded-lg`}
+                      className={`px-4 py-2 bg-gradient-to-r ${siteConfig.colors.gradient.primary} text-white rounded-lg`}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
