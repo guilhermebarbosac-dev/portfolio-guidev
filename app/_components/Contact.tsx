@@ -82,8 +82,8 @@ export default function Contact() {
         <h1 className={`text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
           {siteConfig.contact.title}
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
+          <div className="backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg space-y-8">
             <div>
               <p className={`mt-4 ${siteConfig.colors.text.primary}`}>
                 Conecte-se e vamos criar juntos soluções incríveis. Preencha o formulário ao lado ou utilize um dos canais abaixo.
@@ -121,7 +121,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-transparent">
+          <div className="backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-8">
               <div>
                 <input
