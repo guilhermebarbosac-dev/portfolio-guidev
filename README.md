@@ -52,8 +52,8 @@ Um micro-SaaS que utiliza chatbot para automatizar o processo de agendamento de 
 Caso queira utilizar como base para seu próprio portfólio, siga os seguintes passos:
 
 ```bash
-git clone https://github.com/guilhermebarbosac/guilhermebarbosac.git
-cd guilhermebarbosac
+git clone https://github.com/guilhermebarbosac-dev/portfolio-guidev.git
+cd portfolio-guidev
 yarn install
 yarn dev
 ```
