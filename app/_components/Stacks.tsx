@@ -23,15 +23,15 @@ export default function Stacks() {
           {siteConfig.stacks.title}
         </h1>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center px-6">
           {siteConfig.stacks.list.map((stack) => (
             <motion.div
               key={stack}
-              className="flex flex-col items-center gap-2"
+              className="flex flex-col items-center gap-2 backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg w-full"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="w-20 h-20 flex items-center justify-center bg-background/50 rounded-xl p-4">
+              <div className="w-20 h-20 flex items-center justify-center rounded-xl p-4">
                 <Image
                   src={stackIcons[stack]}
                   alt={`${stack} icon`}

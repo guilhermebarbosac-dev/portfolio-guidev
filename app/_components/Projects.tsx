@@ -23,9 +23,9 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="bg-background/50 backdrop-blur-sm p-6 rounded-lg shadow-lg shadow-gray-800"
+              className="backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg"
             >
-              <div className="flex flex-col md:flex-row gap-6 backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg">
+              <div className="flex flex-col md:flex-row gap-6">
                 <div className="w-full md:w-1/2 relative aspect-video rounded-lg overflow-hidden">
                   <Image
                     src={project.image}
