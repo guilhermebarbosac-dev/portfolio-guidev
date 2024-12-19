@@ -79,7 +79,7 @@ export default function Contact() {
         className="bg-background/50 text-center"
       >
         <ToastContainer position="top-right" autoClose={3000} />
-        <h1 className={`text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
+        <h1 className={`text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
           {siteConfig.contact.title}
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
@@ -97,7 +97,7 @@ export default function Contact() {
                 whileHover={{ x: 4 }}
               >
                 <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5" stroke="url(#gradient)" />
+                  <Mail className="w-5 h-5" />
                   <defs>
                     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%" style={{stopColor: "#2380c4"}} />
@@ -118,7 +118,7 @@ export default function Contact() {
                 whileHover={{ x: 4 }}
               >
                 <div className="flex items-center gap-3">
-                  <Instagram className="w-5 h-5" stroke="url(#gradient)" />
+                  <Instagram className="w-5 h-5"/>
                   <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors`}>
                     @guilhermebarbosac
                   </span>
@@ -131,7 +131,7 @@ export default function Contact() {
                 whileHover={{ x: 4 }}
               >
                 <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5" stroke="url(#gradient)" />
+                  <Phone className="w-5 h-5"/>
                   <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors`}>
                     +55 (34) 99883-3438
                   </span>

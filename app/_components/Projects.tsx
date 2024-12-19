@@ -13,7 +13,7 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
         className="bg-background/50"
       >
-        <h1 className={`text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
+        <h1 className={`text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
           {siteConfig.projects.sectionTitle}
         </h1>
         <div className="grid grid-cols-1 gap-12">
