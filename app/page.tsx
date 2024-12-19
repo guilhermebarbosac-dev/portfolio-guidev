@@ -55,15 +55,36 @@ export default function Portfolio() {
       transition={{ duration: 0.5 }}
       style={{
         background: `
-          linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%),
-          url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a3b6cc' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+          linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%)
         `
       }}
     >
-      <div className="absolute inset-0" style={{
-        background: "linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.5) 100%)",
-        backdropFilter: "blur(100px)"
-      }} />
+      {/* Formas geométricas decorativas */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Paralelepípedos flutuantes */}
+        <div className="absolute top-[10%] left-[5%] w-32 h-32 bg-gradient-to-br from-[#2380c4]/10 to-[#23c4a7]/10 rounded-lg transform rotate-45 animate-float" />
+        <div className="absolute top-[30%] right-[10%] w-40 h-40 bg-gradient-to-bl from-[#2380c4]/10 to-[#23c4a7]/10 rounded-lg transform -rotate-12 animate-float-delayed" />
+        <div className="absolute bottom-[20%] left-[15%] w-36 h-36 bg-gradient-to-tr from-[#2380c4]/10 to-[#23c4a7]/10 rounded-lg transform rotate-180 animate-float" />
+        
+        {/* Círculos decorativos */}
+        <div className="absolute top-[45%] right-[25%] w-24 h-24 rounded-full bg-gradient-to-r from-[#2380c4]/5 to-[#23c4a7]/5 animate-pulse" />
+        <div className="absolute bottom-[35%] right-[8%] w-16 h-16 rounded-full bg-gradient-to-r from-[#23c4a7]/5 to-[#2380c4]/5 animate-pulse-delayed" />
+        
+        {/* Overlay com padrão de grade sutil */}
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(35, 128, 196, 0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(35, 196, 167, 0.03) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px'
+        }} />
+        
+        {/* Overlay de blur */}
+        <div className="absolute inset-0" style={{
+          background: "linear-gradient(45deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 100%)",
+          backdropFilter: "blur(60px)"
+        }} />
+      </div>
 
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm py-4 px-4 sm:px-6 lg:px-8 shadow-sm">
         <ul className="flex justify-center space-x-2 sm:space-x-6">
