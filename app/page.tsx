@@ -60,10 +60,10 @@ export default function Portfolio() {
             <li key={section}>
               <button
                 onClick={() => scrollToSection(section)}
-                className={`uppercase dark:text-white text-gray-800 text-sm sm:text-lg transition-colors duration-300 ${
+                className={`uppercase text-sm sm:text-lg transition-colors duration-300 ${
                   activeSection === section 
                     ? 'text-transparent bg-clip-text bg-gradient-to-r from-[#2380c4] to-[#23c4a7]'
-                    : 'text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#2380c4] to-[#23c4a7]'
+                    : 'text-gray-800 dark:text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#2380c4] to-[#23c4a7]'
                 }`}
               >
                 {section.toUpperCase()}
