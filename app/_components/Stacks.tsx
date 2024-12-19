@@ -23,7 +23,7 @@ export default function Stacks() {
           {siteConfig.stacks.title}
         </h1>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center rounded-lg shadow-lg shadow-gray-800 p-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg">
           {siteConfig.stacks.list.map((stack) => (
             <motion.div
               key={stack}
