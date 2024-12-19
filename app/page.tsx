@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { motion, useScroll, useTransform } from 'motion/react'
+import { motion, useScroll } from 'motion/react'
 import { ChevronDown } from 'lucide-react'
 import Home from './_components/Home'
 import Projects from './_components/Projects'
@@ -13,13 +13,6 @@ import { siteConfig } from '@/configs'
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('inicio')
   const { scrollYProgress } = useScroll()
-
-  const primaryHue = useTransform(scrollYProgress, [0, 0.5, 1], [220, 245, 270])
-  const secondaryHue = useTransform(scrollYProgress, [0, 0.5, 1], [270, 245, 220])
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.2, 0.25, 0.3])
-
-  const primaryColor = useTransform(primaryHue, (hue) => `hsla(${hue}, 70%, 45%, ${opacity.get()})`)
-  const secondaryColor = useTransform(secondaryHue, (hue) => `hsla(${hue}, 70%, 45%, ${opacity.get()})`)
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -56,40 +49,11 @@ export default function Portfolio() {
 
   return (
     <motion.div 
-      className="min-h-screen bg-background text-foreground font-sans relative overflow-hidden"
+      className="min-h-screen bg-background dark:bg-[#34343a] text-foreground font-sans relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="fixed inset-0 z-0">
-        <motion.div 
-          className="absolute top-10 left-10 w-[60rem] h-[60rem] rounded-full blur-3xl"
-          style={{ backgroundColor: primaryColor }}
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 90, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-10 right-10 w-[65rem] h-[65rem] rounded-full blur-3xl"
-          style={{ backgroundColor: secondaryColor }}
-          animate={{
-            scale: [1.2, 1, 1.2],
-            rotate: [90, 0, 90],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-      </div>
-
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm py-4 px-4 sm:px-6 lg:px-8">
         <ul className="flex justify-center space-x-2 sm:space-x-6">
           {siteConfig.navigation.sections.map((section) => (
