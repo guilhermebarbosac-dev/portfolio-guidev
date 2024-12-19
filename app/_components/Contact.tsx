@@ -93,30 +93,49 @@ export default function Contact() {
             <div className="space-y-4">
               <motion.a
                 href="mailto:guilhermebarbosacdev@gmail.com"
-                className={`flex items-center justify-center gap-3 ${siteConfig.colors.text.primary} hover:text-white transition-colors`}
+                className="backdrop-blur-sm bg-white/5 rounded-xl p-4 shadow-lg block"
                 whileHover={{ x: 4 }}
               >
-                <Mail className="w-5 h-5" />
-                <span>guilhermebarbosacdev@gmail.com</span>
+                <div className="flex items-center gap-3">
+                  <Mail className={`w-5 h-5 bg-gradient-to-r ${siteConfig.colors.gradient.primary} [&>path]:fill-transparent [&>path]:stroke-[url(#gradient)]`} />
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style={{stopColor: "#2380c4"}} />
+                      <stop offset="100%" style={{stopColor: "#23c4a7"}} />
+                    </linearGradient>
+                  </defs>
+                  <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors`}>
+                    guilhermebarbosacdev@gmail.com
+                  </span>
+                </div>
               </motion.a>
 
               <motion.a
                 href="https://instagram.com/guilhermebarbosac"
                 target="_blank"
                 rel="noopener noreferrer" 
-                className={`flex items-center justify-center gap-3 ${siteConfig.colors.text.primary} hover:text-white transition-colors`}
+                className="backdrop-blur-sm bg-white/5 rounded-xl p-4 shadow-lg block"
                 whileHover={{ x: 4 }}
               >
-                <Instagram className="w-5 h-5" />
-                <span>@guilhermebarbosac</span>
+                <div className="flex items-center gap-3">
+                  <Instagram className={`w-5 h-5 bg-gradient-to-r ${siteConfig.colors.gradient.primary} [&>path]:fill-transparent [&>path]:stroke-[url(#gradient)]`} />
+                  <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors`}>
+                    @guilhermebarbosac
+                  </span>
+                </div>
               </motion.a>
+
               <motion.button
                 onClick={handleWhatsApp}
-                className={`flex items-center justify-center gap-3 ${siteConfig.colors.text.primary} hover:text-white transition-colors w-full`}
+                className="backdrop-blur-sm bg-white/5 rounded-xl p-4 shadow-lg block w-full"
                 whileHover={{ x: 4 }}
               >
-                <Phone className="w-5 h-5" />
-                <span>+55 (34) 99883-3438</span>
+                <div className="flex items-center gap-3">
+                  <Phone className={`w-5 h-5 bg-gradient-to-r ${siteConfig.colors.gradient.primary} [&>path]:fill-transparent [&>path]:stroke-[url(#gradient)]`} />
+                  <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors`}>
+                    +55 (34) 99883-3438
+                  </span>
+                </div>
               </motion.button>
             </div>
           </div>
