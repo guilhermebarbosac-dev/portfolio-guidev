@@ -97,7 +97,7 @@ export default function Contact() {
                 whileHover={{ x: 4 }}
               >
                 <div className="flex items-center gap-3">
-                  <Mail className={`w-5 h-5 bg-gradient-to-r ${siteConfig.colors.gradient.primary} [&>path]:fill-transparent [&>path]:stroke-[url(#gradient)]`} />
+                  <Mail className="w-5 h-5" stroke="url(#gradient)" />
                   <defs>
                     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%" style={{stopColor: "#2380c4"}} />
@@ -118,7 +118,7 @@ export default function Contact() {
                 whileHover={{ x: 4 }}
               >
                 <div className="flex items-center gap-3">
-                  <Instagram className={`w-5 h-5 bg-gradient-to-r ${siteConfig.colors.gradient.primary} [&>path]:fill-transparent [&>path]:stroke-[url(#gradient)]`} />
+                  <Instagram className="w-5 h-5" stroke="url(#gradient)" />
                   <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors`}>
                     @guilhermebarbosac
                   </span>
@@ -131,7 +131,7 @@ export default function Contact() {
                 whileHover={{ x: 4 }}
               >
                 <div className="flex items-center gap-3">
-                  <Phone className={`w-5 h-5 bg-gradient-to-r ${siteConfig.colors.gradient.primary} [&>path]:fill-transparent [&>path]:stroke-[url(#gradient)]`} />
+                  <Phone className="w-5 h-5" stroke="url(#gradient)" />
                   <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors`}>
                     +55 (34) 99883-3438
                   </span>
