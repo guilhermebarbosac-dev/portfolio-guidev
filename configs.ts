@@ -136,7 +136,7 @@ export const siteConfig = {
   },
   // Navegação
   navigation: {
-    sections: ["inicio", "projetos", "stacks", "sobre", "contato"],
+    sections: ["inicio", "sobre", "stacks", "projetos", "contato"],
     height: 64 // altura da navbar em pixels
   },
 
