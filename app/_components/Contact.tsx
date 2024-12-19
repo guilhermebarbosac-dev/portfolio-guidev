@@ -164,7 +164,7 @@ export default function Contact() {
 
               <motion.button
                 type="submit"
-                className="px-6 py-2 rounded-lg bg-transparent border border-gray-600 hover:border-gray-900 dark:hover:border-white text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors w-full"
+                className="group relative px-6 py-2 rounded-lg bg-gradient-to-r from-[#2380c4] to-[#23c4a7] overflow-hidden transition-all duration-300 hover:before:opacity-100 before:absolute before:inset-0 before:bg-[linear-gradient(to_right,#23c4a7,#2380c4)] before:opacity-0 before:transition-opacity before:-z-10"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
                 disabled={isSubmitting}
