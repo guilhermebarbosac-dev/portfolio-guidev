@@ -49,12 +49,23 @@ export default function Portfolio() {
 
   return (
     <motion.div 
-      className="min-h-screen bg-background dark:bg-[#34343a] text-foreground font-sans relative overflow-hidden"
+      className="min-h-screen font-sans relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
+      style={{
+        background: `
+          linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%),
+          url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a3b6cc' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+        `
+      }}
     >
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm py-4 px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0" style={{
+        background: "linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.5) 100%)",
+        backdropFilter: "blur(100px)"
+      }} />
+
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm py-4 px-4 sm:px-6 lg:px-8 shadow-sm">
         <ul className="flex justify-center space-x-2 sm:space-x-6">
           {siteConfig.navigation.sections.map((section) => (
             <li key={section}>
@@ -63,7 +74,7 @@ export default function Portfolio() {
                 className={`uppercase text-sm sm:text-lg transition-colors duration-300 ${
                   activeSection === section 
                     ? 'text-transparent bg-clip-text bg-gradient-to-r from-[#2380c4] to-[#23c4a7]'
-                    : 'text-gray-800 dark:text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#2380c4] to-[#23c4a7]'
+                    : 'text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-[#2380c4] to-[#23c4a7]'
                 }`}
               >
                 {section.toUpperCase()}
@@ -75,7 +86,7 @@ export default function Portfolio() {
 
       <main className="pt-16 relative z-10">
         <div className="fixed left-8 top-1/2 -translate-y-1/2 h-[60vh] flex items-center">
-          <div className="w-1 h-full bg-gray-800/20 rounded-full relative">
+          <div className="w-1 h-full bg-gray-800/10 rounded-full relative">
             <motion.div
               className="absolute top-0 w-full bg-gradient-to-b from-[#2380c4] to-[#23c4a7] rounded-full origin-top"
               style={{ 
@@ -90,7 +101,7 @@ export default function Portfolio() {
                 y: "-50%"
               }}
             >
-              <div className="absolute inset-[2px] rounded-full bg-background" />
+              <div className="absolute inset-[2px] rounded-full bg-white" />
             </motion.div>
           </div>
         </div>
@@ -151,12 +162,12 @@ export default function Portfolio() {
         </motion.section>
       </main>
 
-      <footer className="py-6 px-4 sm:px-6 lg:px-8 text-center text-muted-foreground relative z-10">
+      <footer className="py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-600 relative z-10">
         <p>{siteConfig.footer.copyright(new Date().getFullYear())}</p>
       </footer>
 
       <motion.div
-        className="fixed bottom-4 right-4 bg-foreground text-background p-2 rounded-full cursor-pointer z-50"
+        className="fixed bottom-4 right-4 bg-white/80 backdrop-blur-sm text-gray-800 p-2 rounded-full cursor-pointer z-50 shadow-lg"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
