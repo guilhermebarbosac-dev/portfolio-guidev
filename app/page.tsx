@@ -6,9 +6,9 @@ import { ChevronDown } from 'lucide-react'
 import Home from './_components/Home'
 import Projects from './_components/Projects'
 import About from './_components/About'
-import { siteConfig } from '@/configs'
 import Stacks from './_components/Stacks'
 import Contact from './_components/Contact'
+import { siteConfig } from '@/configs'
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('inicio')
