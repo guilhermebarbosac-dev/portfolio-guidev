@@ -9,6 +9,7 @@ import About from './_components/About'
 import Stacks from './_components/Stacks'
 import Contact from './_components/Contact'
 import { siteConfig } from '@/configs'
+import Image from 'next/image'
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('inicio')
@@ -54,6 +55,23 @@ export default function Portfolio() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <Image 
+          src="/bg_page/waves.svg" 
+          alt="Wave Pattern Top"
+          className="absolute top-0 opacity-15 dark:opacity-40 rotate-180"
+          width={2200}
+          height={2200}
+        />
+        <Image 
+          src="/bg_page/asset2.svg" 
+          alt="Background Pattern 2"
+          className="absolute bottom-0 left-0 opacity-15 dark:opacity-10 transform -translate-y-1/4 -translate-x-1/4 rotate-90"
+          width={1000}
+          height={1000}
+        />
+      </div>
+
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm py-4 px-4 sm:px-6 lg:px-8">
         <ul className="flex justify-center space-x-2 sm:space-x-6">
           {siteConfig.navigation.sections.map((section) => (
@@ -97,7 +115,7 @@ export default function Portfolio() {
 
         <motion.section 
           id="inicio" 
-          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16 relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -108,29 +126,50 @@ export default function Portfolio() {
 
         <motion.section 
           id="sobre" 
-          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16 relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
+          <Image 
+            src="/bg_page/asset.svg" 
+            alt="Background Pattern"
+            className="absolute top-0 left-0 opacity-15 dark:opacity-10 transform -translate-y-1/4 -translate-x-1/2 rotate-90"
+            width={200}
+            height={200}
+          />
           <About />
+          <Image 
+            src="/bg_page/asset2.svg" 
+            alt="Background Pattern"
+            className="absolute bottom-0 right-0 opacity-15 dark:opacity-10 transform translate-y-1/4 translate-x-1/4 -rotate-90"
+            width={200}
+            height={200}
+          />
         </motion.section>
         
         <motion.section 
           id="stacks" 
-          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16 relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <Stacks />
+          <Image 
+            src="/bg_page/asset.svg" 
+            alt="Background Pattern"
+            className="absolute left-0 opacity-15 dark:opacity-10 transform -translate-y-1/4 -translate-x-1/2 rotate-90"
+            width={200}
+            height={200}
+          />
         </motion.section>
 
         <motion.section 
           id="projetos" 
-          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16 relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -141,20 +180,28 @@ export default function Portfolio() {
 
         <motion.section 
           id="contato" 
-          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16 relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <Contact />
+          <div className="bottom-0 left-0 right-0 w-full h-full overflow-hidden z-0">
+            <Image 
+              src="/bg_page/waves.svg" 
+              alt="Wave Pattern"
+              className="w-full h-full object-cover transform scale-110 absolute bottom-[-2rem] left-0 -z-10"
+              width={1000}
+              height={1000}
+            />
+          </div>
         </motion.section>
       </main>
 
       <footer className="py-6 px-4 sm:px-6 lg:px-8 text-center text-muted-foreground relative z-10">
         <p>{siteConfig.footer.copyright(new Date().getFullYear())}</p>
       </footer>
-
       <motion.div
         className="fixed bottom-4 right-4 bg-foreground text-background p-2 rounded-full cursor-pointer z-50"
         whileHover={{ scale: 1.1 }}

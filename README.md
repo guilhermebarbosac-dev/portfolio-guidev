@@ -48,7 +48,7 @@ Um micro-SaaS que utiliza chatbot para automatizar o processo de agendamento de 
 - WhatsApp: +55 (34) 99883-3438
 
 ## Landing Page Full
-- ![Guilherme Barbosa Landing Page](https://schia-storage.sfo3.cdn.digitaloceanspaces.com/Guilherme%20Dev%20%C2%B7%205.12pm%20%C2%B7%2012-19.jpeg)
+- ![Guilherme Barbosa Landing Page](https://schia-storage.sfo3.cdn.digitaloceanspaces.com/Guilherme%20Dev.jpeg)
 
 ## Instalação e Execução Local
 Caso queira utilizar como base para seu próprio portfólio, siga os seguintes passos:
