@@ -143,16 +143,16 @@ export default function Portfolio() {
         </motion.section>
 
         <motion.section 
-          id="projetos" 
+          id="sobre" 
           className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Projects />
+          <About />
         </motion.section>
-
+        
         <motion.section 
           id="stacks" 
           className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
@@ -165,14 +165,14 @@ export default function Portfolio() {
         </motion.section>
 
         <motion.section 
-          id="sobre" 
+          id="projetos" 
           className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <About />
+          <Projects />
         </motion.section>
 
         <motion.section 
