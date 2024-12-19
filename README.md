@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio Profissional - Guilherme Barbosa
 
-## Getting Started
+![Guilherme Barbosa](/profile.png)
 
-First, run the development server:
+## Sobre Mim
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Sou Guilherme Barbosa, um Frontend Developer apaixonado por criar experiências digitais únicas e funcionais. Atualmente, atuo como QA Engineer com foco em testes manuais e automatizados, enquanto desenvolvo minhas habilidades como desenvolvedor Front-end.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Experiência Profissional
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Possuo sólidos conhecimentos em:
+- React
+- Next.js 
+- Angular
+- TypeScript
+- Node.js
+- E outras tecnologias modernas de desenvolvimento web
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Em 2024, alcancei um marco importante ao desenvolver meu primeiro micro-SaaS (Sch.IA), implementando integrações avançadas com IA e chatbot. Este projeto demonstra minha capacidade de criar soluções inovadoras e funcionais do conceito ao deploy.
 
-## Learn More
+### Formação e Especialização
 
-To learn more about Next.js, take a look at the following resources:
+Minha formação inclui diversos cursos especializados em desenvolvimento front-end e conhecimentos em desenvolvimento full-stack. Tenho paixão por criar interfaces intuitivas e experiências de usuário excepcionais, sempre combinando minha experiência em QA com as melhores práticas de desenvolvimento.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tecnologias
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Trabalho com diversas tecnologias modernas, incluindo:
+- React/Next.js
+- TypeScript
+- Node.js
+- Angular
+- SCSS
+- PostgreSQL
+- Docker
+- E muito mais
 
-## Deploy on Vercel
+## Projetos em Destaque
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Sch.IA
+Um micro-SaaS que utiliza chatbot para automatizar o processo de agendamento de clientes.
+- Stack: React, TypeScript, Shadcn UI, Node.js, Postgres
+- [Visite o projeto](https://schia.com.br)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contato
+
+- Email: guilhermebarbosacdev@gmail.com
+- Instagram: [@guilhermebarbosac](https://instagram.com/guilhermebarbosac)
+- WhatsApp: +55 (34) 99883-3438
+
+## Instalação e Execução Local
