@@ -1,6 +1,5 @@
 ![Banner Guilherme Barbosa](https://schia-storage.sfo3.cdn.digitaloceanspaces.com/portfolio-guilherme/banner-horizontal.png)
 
-![Guilherme Barbosa](https://schia-storage.sfo3.cdn.digitaloceanspaces.com/guilhermecorporativo.jpg)
 
 ## Sobre Mim
 
