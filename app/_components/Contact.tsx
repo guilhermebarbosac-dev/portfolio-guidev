@@ -93,18 +93,12 @@ export default function Contact() {
             <div className="space-y-4">
               <motion.a
                 href="mailto:guilhermebarbosacdev@gmail.com"
-                className="backdrop-blur-sm bg-white/5 rounded-xl p-4 shadow-lg block"
+                className="backdrop-blur-sm bg-transparent rounded-xl p-4 shadow-lg block"
                 whileHover={{ x: 4 }}
               >
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5" />
-                  <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style={{stopColor: "#2380c4"}} />
-                      <stop offset="100%" style={{stopColor: "#23c4a7"}} />
-                    </linearGradient>
-                  </defs>
-                  <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors`}>
+                <div className="flex items-center align-middle justify-center gap-3">
+                  <Mail className="min-w-[20px]" />
+                  <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors text-left hidden md:block`}>
                     guilhermebarbosacdev@gmail.com
                   </span>
                 </div>
@@ -114,12 +108,12 @@ export default function Contact() {
                 href="https://instagram.com/guilhermebarbosac"
                 target="_blank"
                 rel="noopener noreferrer" 
-                className="backdrop-blur-sm bg-white/5 rounded-xl p-4 shadow-lg block"
+                className="backdrop-blur-sm bg-transparent rounded-xl p-4 shadow-lg block"
                 whileHover={{ x: 4 }}
               >
-                <div className="flex items-center gap-3">
-                  <Instagram className="w-5 h-5"/>
-                  <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors`}>
+                <div className="flex items-center align-middle justify-center gap-3">
+                  <Instagram className="min-w-[20px]" />
+                  <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors text-left hidden md:block`}>
                     @guilhermebarbosac
                   </span>
                 </div>
@@ -127,12 +121,12 @@ export default function Contact() {
 
               <motion.button
                 onClick={handleWhatsApp}
-                className="backdrop-blur-sm bg-white/5 rounded-xl p-4 shadow-lg block w-full"
+                className="backdrop-blur-sm bg-transparent rounded-xl p-4 shadow-lg block w-full"
                 whileHover={{ x: 4 }}
               >
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5"/>
-                  <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors`}>
+                <div className="flex items-center align-middle justify-center gap-3">
+                  <Phone className="min-w-[20px]" />
+                  <span className={`${siteConfig.colors.text.primary} hover:text-white transition-colors text-left hidden md:block`}>
                     +55 (34) 99883-3438
                   </span>
                 </div>
