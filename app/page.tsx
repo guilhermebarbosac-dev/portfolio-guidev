@@ -59,16 +59,9 @@ export default function Portfolio() {
         <Image 
           src="/bg_page/waves.svg" 
           alt="Wave Pattern Top"
-          className="absolute top-0 opacity-15 dark:opacity-40 rotate-180"
+          className="absolute top-0 opacity-15 dark:opacity-40 rotate-180 w-[2200px] sm:w-[2200px]"
           width={2200}
           height={2200}
-        />
-        <Image 
-          src="/bg_page/asset2.svg" 
-          alt="Background Pattern 2"
-          className="absolute bottom-0 left-0 opacity-15 dark:opacity-10 transform -translate-y-1/4 -translate-x-1/4 rotate-90"
-          width={1000}
-          height={1000}
         />
       </div>
 
@@ -135,7 +128,7 @@ export default function Portfolio() {
           <Image 
             src="/bg_page/asset.svg" 
             alt="Background Pattern"
-            className="absolute top-0 left-0 opacity-15 dark:opacity-10 transform -translate-y-1/4 -translate-x-1/2 rotate-90"
+            className="absolute top-0 left-0 opacity-15 dark:opacity-10 transform -translate-y-1/4 -translate-x-[100px] rotate-90 w-[100px] sm:w-[200px] sm:-translate-y-1/4 sm:-translate-x-1/2"
             width={200}
             height={200}
           />
@@ -143,7 +136,7 @@ export default function Portfolio() {
           <Image 
             src="/bg_page/asset2.svg" 
             alt="Background Pattern"
-            className="absolute bottom-0 right-0 opacity-15 dark:opacity-10 transform translate-y-1/4 translate-x-1/4 -rotate-90"
+            className="absolute bottom-0 right-0 opacity-15 dark:opacity-10 transform translate-y-1/4 translate-x-1/4 -rotate-90 w-[100px] sm:w-[200px]"
             width={200}
             height={200}
           />
@@ -161,7 +154,7 @@ export default function Portfolio() {
           <Image 
             src="/bg_page/asset.svg" 
             alt="Background Pattern"
-            className="absolute left-0 opacity-15 dark:opacity-10 transform -translate-y-1/4 -translate-x-1/2 rotate-90"
+            className="absolute left-0 opacity-15 dark:opacity-10 transform -translate-y-1/4 -translate-x-[100px] rotate-90 w-[100px] sm:w-[200px] sm:-translate-y-1/4 sm:-translate-x-1/2"
             width={200}
             height={200}
           />
@@ -180,23 +173,21 @@ export default function Portfolio() {
 
         <motion.section 
           id="contato" 
-          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16 relative"
+          className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 ml-16 relative z-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <Contact />
-          <div className="bottom-0 left-0 right-0 w-full h-full overflow-hidden z-0">
-            <Image 
+        </motion.section>
+        <Image 
               src="/bg_page/waves.svg" 
               alt="Wave Pattern"
-              className="w-full h-full object-cover transform scale-110 absolute bottom-[-2rem] left-0 -z-10"
-              width={1000}
-              height={1000}
-            />
-          </div>
-        </motion.section>
+              className="absolute opacity-15 dark:opacity-40 w-[2200px] sm:w-[2200px] -bottom-[100px] sm:-bottom-[100px] z-0"
+              width={2200}
+              height={2200}
+        />
       </main>
 
       <footer className="py-6 px-4 sm:px-6 lg:px-8 text-center text-muted-foreground relative z-10">
