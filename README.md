@@ -50,6 +50,9 @@ Um micro-SaaS que utiliza chatbot para automatizar o processo de agendamento de 
 ## Landing Page Full
 - ![Guilherme Barbosa Landing Page](https://schia-storage.sfo3.cdn.digitaloceanspaces.com/Guilherme%20Dev.jpeg)
 
+## Landing Page Mobile
+- ![Guilherme Barbosa Landing Page](https://schia-storage.sfo3.cdn.digitaloceanspaces.com/Guilherme%20Dev%20%C2%B7%208.50am%20%C2%B7%2012-20.jpeg)
+
 ## Instalação e Execução Local
 Caso queira utilizar como base para seu próprio portfólio, siga os seguintes passos:
 

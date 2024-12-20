@@ -7,29 +7,27 @@ import { siteConfig } from '@/configs'
 export default function Home() {
   return (
     <div className="relative flex items-center justify-center min-h-screen overflow-hidden">
-      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-7xl mx-auto px-4 md:px-8 gap-8 md:gap-0">
+      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-7xl mx-auto px-1 md:px-8 gap-8 md:gap-0">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
           className="flex flex-col items-center"
         >
-          <motion.h1 
-            className={`text-3xl sm:text-4xl md:text-6xl font-bold mb-3 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary} text-center`}
-            animate={{
-              backgroundPosition: ["0%", "100%", "0%"],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            style={{
-              backgroundSize: "200% auto"
-            }}
+          <motion.div
+            className="mb-3 md:mb-6 text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
-            {siteConfig.home.title}
-          </motion.h1>
+            <Image 
+              src={siteConfig.images.titles.home}
+              alt="Guilherme Barbosa"
+              width={600}
+              height={100}
+              priority
+            />
+          </motion.div>
           <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-8">
             <motion.div 
               className={`h-[1px] w-12 sm:w-16 md:w-32 bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}
@@ -85,7 +83,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-background rounded-2xl">
             <Image
               src={siteConfig.images.profile}
-              alt={siteConfig.home.title}
+              alt="Guilherme Barbosa"
               fill
               className="object-cover rounded-2xl"
             />

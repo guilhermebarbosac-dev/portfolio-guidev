@@ -19,19 +19,26 @@ export const siteConfig = {
       schia: "/projects_images/schia.png",
       project2: "/project2.png", 
       project3: "/project3.png"
+    },
+    titles: {
+      home: "/titles_page/home.svg",
+      about: "/titles_page/quemsou.svg", 
+      stacks: "/titles_page/stacks.svg",
+      projects: "/titles_page/projetos.svg",
+      contact: "/titles_page/contato.svg"
     }
   },
 
   // Conteúdo da Home
   home: {
-    title: "Guilherme Barbosa",
+    // title: "Guilherme Barbosa",
     role: "Frontend Developer",
     description: "Desenvolvedor Web apaixonado por criar experiências digitais únicas e funcionais"
   },
 
   // Conteúdo dos Projetos
   projects: {
-    sectionTitle: "MEUS PROJETOS",
+    // sectionTitle: "MEUS PROJETOS",
     list: [
       {
         id: 1,
@@ -69,7 +76,7 @@ export const siteConfig = {
 
   // Conteúdo do About
   about: {
-    sectionTitle: "QUEM SOU",
+    // sectionTitle: "QUEM SOU",
     paragraphs: [
       "Sou um profissional multifacetado na área de tecnologia, atualmente atuando como QA Engineer com foco em testes manuais e automatizados. Paralelamente, venho me desenvolvendo como desenvolvedor Front-end, com sólidos conhecimentos em React, Next.js, Angular e TypeScript.",
       "Em 2024, alcancei um marco significativo ao desenvolver meu primeiro micro-SaaS, implementando integrações avançadas com IA e chatbot. Este projeto demonstra minha capacidade de criar soluções inovadoras e funcionais do conceito ao deploy.",
@@ -78,7 +85,7 @@ export const siteConfig = {
   },
   // Conteúdo do Stacks
   stacks: {
-      title: "STACKS",
+      // title: "STACKS",
       list: [
           "React", 
           "TypeScript", 
@@ -122,7 +129,7 @@ export const siteConfig = {
   },
   //Contato
   contact: {
-    title: "CONTATO",
+    // title: "CONTATO",
     subtitle: "ENTRE EM CONTATO",
     description: "Entre em contato comigo para discutir oportunidades de colaboração ou para saber mais sobre meus serviços.",
     buttons: {

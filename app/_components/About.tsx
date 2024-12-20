@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react'
 import { siteConfig } from '@/configs'
-
+import Image from 'next/image'
 export default function About() {
   return (
     <div className="max-w-6xl mx-auto">
@@ -12,22 +12,32 @@ export default function About() {
         transition={{ duration: 0.5 }}
         className="bg-background/50"
       >
-        <h1 className={`text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
-          {siteConfig.about.sectionTitle}
-        </h1>
-
+        <motion.div
+          className="flex justify-center mb-3 md:mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image 
+            src={siteConfig.images.titles.about}
+            alt="Sobre"
+            width={600}
+            height={100}
+            priority
+          />
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="space-y-6"
+            className="h-full"
           >
-            <div className="backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg">
+            <div className="backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg h-full flex flex-col">
               <h2 className="text-2xl font-semibold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#2380c4] to-[#23c4a7]">
                 Experiência
               </h2>
-              <p className={`text-lg leading-relaxed ${siteConfig.colors.text.primary}`}>
+              <p className={`text-lg leading-relaxed ${siteConfig.colors.text.primary} flex-grow`}>
                 {siteConfig.about.paragraphs[0]}
               </p>
             </div>
@@ -37,13 +47,13 @@ export default function About() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
-            className="space-y-6"
+            className="h-full"
           >
-            <div className="backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg">
+            <div className="backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg h-full flex flex-col">
               <h2 className="text-2xl font-semibold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#2380c4] to-[#23c4a7]">
                 Objetivos
               </h2>
-              <p className={`text-lg leading-relaxed ${siteConfig.colors.text.primary}`}>
+              <p className={`text-lg leading-relaxed ${siteConfig.colors.text.primary} flex-grow`}>
                 {siteConfig.about.paragraphs[1]}
               </p>
             </div>

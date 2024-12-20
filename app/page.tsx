@@ -177,7 +177,7 @@ export default function Portfolio() {
 
         <motion.section 
           id="inicio" 
-          className="min-h-screen py-20 px-6 sm:px-6 lg:px-8 sm:ml-16 relative"
+          className="min-h-screen py-10 px-0 sm:px-6 lg:px-8 sm:ml-16 relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -188,7 +188,7 @@ export default function Portfolio() {
 
         <motion.section 
           id="sobre" 
-          className="min-h-screen py-20 px-6 sm:px-6 lg:px-8 sm:ml-16 relative"
+          className="min-h-screen py-10 px-0 sm:px-6 lg:px-8 sm:ml-16 relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -213,7 +213,7 @@ export default function Portfolio() {
         
         <motion.section 
           id="stacks" 
-          className="min-h-screen py-20 px-6 sm:px-6 lg:px-8 sm:ml-16 relative"
+          className="min-h-screen py-10 px-0 sm:px-6 lg:px-8 sm:ml-16 relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -231,7 +231,7 @@ export default function Portfolio() {
 
         <motion.section 
           id="projetos" 
-          className="min-h-screen py-20 px-6 sm:px-6 lg:px-8 sm:ml-16 relative"
+          className="min-h-screen py-10 px-6 sm:px-6 lg:px-8 sm:ml-16 relative"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -242,7 +242,7 @@ export default function Portfolio() {
 
         <motion.section 
           id="contato" 
-          className="min-h-screen py-20 px-6 sm:px-6 lg:px-8 sm:ml-16 relative z-10"
+          className="min-h-screen py-10 px-0 sm:px-6 lg:px-8 sm:ml-16 relative z-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

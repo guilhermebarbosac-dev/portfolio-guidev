@@ -19,9 +19,20 @@ export default function Stacks() {
         transition={{ duration: 0.5 }}
         className="bg-background/50"
       >
-        <h1 className={`text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
-          {siteConfig.stacks.title}
-        </h1>
+        <motion.div
+          className="flex justify-center mb-3 md:mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image 
+            src={siteConfig.images.titles.stacks}
+            alt="Sobre"
+            width={600}
+            height={100}
+            priority
+          />
+        </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 justify-items-center px-6">
           {siteConfig.stacks.list.map((stack) => (

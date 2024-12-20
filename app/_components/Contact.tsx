@@ -7,6 +7,7 @@ import { siteConfig } from '@/configs'
 import { submitContactForm } from '../actions/submit'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Image from 'next/image'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -79,9 +80,20 @@ export default function Contact() {
         className="bg-background/50 text-center"
       >
         <ToastContainer position="top-right" autoClose={3000} />
-        <h1 className={`text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r ${siteConfig.colors.gradient.primary}`}>
-          {siteConfig.contact.title}
-        </h1>
+        <motion.div
+          className="flex justify-center mb-3 md:mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image 
+            src={siteConfig.images.titles.contact}
+            alt="Contato"
+            width={600}
+            height={100}
+            priority
+          />
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
           <div className="backdrop-blur-sm bg-white/5 rounded-xl p-8 shadow-lg space-y-8">
             <div>
